@@ -2,5 +2,4 @@
 // Para atualizar, execute: make assets
 
 class AppAssets {
-  static const String imagesLogoPrefeitura = 'assets/images/logo_prefeitura.png';
 }

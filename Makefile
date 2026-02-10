@@ -23,14 +23,14 @@ clean:
 
 .PHONY: assets
 assets:
-	@echo "🔍 Buscando assets em '$(ASSETS_DIR)' (ignorando a pasta 'fonts')..."
+	@echo "🔍 Buscando assets em '$(ASSETS_DIR)' (ignorando 'fonts' e 'flavors')..."
 	@rm -f $(OUTPUT_FILE)
 	@mkdir -p $(dir $(OUTPUT_FILE))
 	@echo "// ATENÇÃO: Este arquivo é gerado automaticamente. Não edite manualmente." > $(OUTPUT_FILE)
 	@echo "// Para atualizar, execute: make assets" >> $(OUTPUT_FILE)
 	@echo "" >> $(OUTPUT_FILE)
 	@echo "class AppAssets {" >> $(OUTPUT_FILE)
-	@find $(ASSETS_DIR) -type f -not -path "*/fonts/*" | sort | while read file; do \
+	@find $(ASSETS_DIR) -type f -not -path "*/fonts/*" -not -path "*/flavors/*" | sort | while read file; do \
 		var_name=$$(echo "$$file" | sed -e 's|^$(ASSETS_DIR)/||' -e 's/\.[^.]*$$//' | awk 'BEGIN{FS="[/_-]"} {printf "%s", $$1; for(i=2;i<=NF;i++) printf "%s", toupper(substr($$i,1,1)) substr($$i,2)}'); \
 		echo "  static const String $$var_name = '$$file';" >> $(OUTPUT_FILE); \
 	done
