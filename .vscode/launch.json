@@ -1,0 +1,60 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Empresa A (Dev)",
+            "type": "dart",
+            "request": "launch",
+            "args": [
+                "--flavor",
+                "empresaADev",
+                "-t",
+                "lib/main.dart",
+                "--dart-define=CUSTOMER=empresaA",
+                "--dart-define=ENV=dev"
+            ]
+        },
+        {
+            "name": "Empresa A (Prod)",
+            "type": "dart",
+            "request": "launch",
+            "args": [
+                "--flavor",
+                "empresaAProd",
+                "-t",
+                "lib/main.dart",
+                "--dart-define=CUSTOMER=empresaA",
+                "--dart-define=ENV=prd",
+                "--dart-define-from-file=secrets.json"
+            ]
+        },
+        {
+            "name": "Empresa B (Dev)",
+            "type": "dart",
+            "request": "launch",
+            "args": [
+                "--flavor",
+                "empresaBDev",
+                "-t",
+                "lib/main.dart",
+                "--dart-define=CUSTOMER=empresaB",
+                "--dart-define=ENV=dev",
+                "--dart-define-from-file=secrets.json"
+            ]
+        },
+        {
+            "name": "Empresa B (Prod)",
+            "type": "dart",
+            "request": "launch",
+            "args": [
+                "--flavor",
+                "empresaBProd",
+                "-t",
+                "lib/main.dart",
+                "--dart-define=CUSTOMER=empresaB",
+                "--dart-define=ENV=prd",
+                "--dart-define-from-file=secrets.json"
+            ]
+        }
+    ]
+}
