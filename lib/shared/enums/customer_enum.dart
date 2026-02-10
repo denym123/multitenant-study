@@ -1,0 +1,1 @@
+enum Customer { empresaA, empresaB }

@@ -1,0 +1,27 @@
+{
+    "@@locale": "pt",
+
+    "@__COMMON_FIELDS__": "----------------------------------------",
+    "common_fields_email": "Email",
+    "common_fields_confirm_email": "Confirmar Email",
+    "common_fields_confirm_password": "Confirmar Senha",
+    "common_fields_password": "Senha",
+    "common_fields_cpf": "CPF",
+    "common_fields_cnpj": "CNPJ",
+    "common_fields_phone": "Telefone",
+
+    "@__COMMON_ACTIONS": "----------------------------------------",
+    "common_actions_sign_in": "Entrar",
+    "common_actions_sign_up": "Cadastrar",
+    "common_actions_sign_out": "Sair",
+    "common_actions_edit": "Editar",
+    "common_actions_delete": "Deletar",
+    "common_actions_save": "Salvar",
+    "common_actions_cancel": "Cancelar",
+    "common_actions_next": "Proximo",
+    "common_actions_back": "Voltar",
+    "common_actions_continue": "Continuar",
+    "common_actions_finish": "Finalizar",
+    "common_actions_send": "Enviar",
+    "common_actions_confirm": "Confirmar"
+}
